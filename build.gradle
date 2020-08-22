@@ -4,6 +4,9 @@ buildscript {
         google()
         jcenter()
 
+        // 阿里国内镜像
+         maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+
         //1. 添加插件仓库地址
         maven { url 'https://maven.fabric.io/public' }
         mavenLocal()
@@ -26,11 +29,19 @@ buildscript {
 
 allprojects {
     repositories {
+        // 使用阿里云镜像
+        // https://blog.csdn.net/mp624183768/article/details/106375773
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/google' }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/gradle-plugin' }
+        maven { url 'https://jitpack.io' }
         google()
         jcenter()
-
+        mavenCentral()
+        
         maven { url 'https://maven.fabric.io/public' }
-        mavenLocal()
+
         maven { url 'https://maven.google.com' }
         
        //  maven {
