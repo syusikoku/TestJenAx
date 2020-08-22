@@ -5,13 +5,13 @@ buildscript {
         jcenter()
 
         //1. 添加插件仓库地址
-      //  maven { url 'https://maven.fabric.io/public' }
+        maven { url 'https://maven.fabric.io/public' }
         mavenLocal()
         maven { url 'https://maven.google.com'  }
         
-         maven {
-           url 'http://s3.amazonaws.com/fabric-artifacts/public'
-       }
+       //  maven {
+        //   url 'http://s3.amazonaws.com/fabric-artifacts/public'
+     //  }
     }
     dependencies {
         classpath "com.android.tools.build:gradle:4.0.1"
@@ -29,13 +29,13 @@ allprojects {
         google()
         jcenter()
 
-       //  maven { url 'https://maven.fabric.io/public' }
+        maven { url 'https://maven.fabric.io/public' }
         mavenLocal()
         maven { url 'https://maven.google.com' }
         
-         maven {
-           url 'http://s3.amazonaws.com/fabric-artifacts/public'
-       }
+       //  maven {
+       //    url 'http://s3.amazonaws.com/fabric-artifacts/public'
+      // }
 
     }
 }
